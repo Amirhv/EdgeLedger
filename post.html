@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS Utilities -->
+    <link rel="stylesheet" href="css/utilities.css">
+    <!-- CSS Style -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- CSS Fontawesome -->
+    <link rel="stylesheet" href="css/fontawesome_all.css">
+
+    <title>Read Our Blog</title>
+</head>
+<body id="home">
+    <!-- Header -->
+    <header class="hero blog">
+        <!-- Navbar -->
+        <div id="navbar" class="navbar top">
+            <!-- Logo -->
+            <h1 class="logo">
+                <span class="text-primary"><i class="fas fa-book-open"></i> Edge</span>Ledger
+            </h1>
+            <!-- Nav -->
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#cases">Cases</a></li>
+                    <li><a href="index.html#blog">Blog</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- Content -->
+        <div class="content">
+            <h1>Blog</h1>
+        </div>
+    </header>
+   
+    <!-- Main -->
+    <main>
+        <section class="post">
+            <h2>Blog Post One</h2>
+                <p class="meta">
+                    <i class="fas fa-user"></i>
+                    Posted by <strong>John Doe</strong> | April 19 2020
+                </p>
+
+                <img src="img/blog/blog1.jpg" alt="">
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente aut sint, hic porro rerum rem voluptates a, beatae, ex aliquid soluta tempora sequi quis ullam. Adipisci nam aliquam aut consequatur.</p>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quod sapiente cupiditate facilis soluta accusamus libero, optio possimus repellendus molestiae consequuntur quaerat voluptas tenetur odio officia amet dolor sit ipsam voluptates non laborum a voluptatibus fugiat eos. Cupiditate, enim vel cumque officiis eum ut! Repellendus non itaque alias possimus quo cum quasi aliquid magni, nihil corporis? Eveniet enim ullam asperiores.</p>
+
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia omnis dolorem tenetur, necessitatibus doloribus distinctio quis adipisci recusandae praesentium harum excepturi, autem repudiandae! Dolorum quisquam praesentium laboriosam eum animi quae sit necessitatibus vero adipisci veritatis consectetur tempora officia, voluptatibus labore repudiandae nostrum iusto deserunt? Ab architecto atque placeat qui similique.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark">
+        <div class="social">
+            <a href=""><i class="fab fa-facebook fa-2x"></i></a>
+            <a href=""><i class="fab fa-twitter fa-2x"></i></a>
+            <a href=""><i class="fab fa-youtube fa-2x"></i></a>
+            <a href=""><i class="fab fa-linkedin fa-2x"></i></a>
+        </div>
+        <p>Copyright &copy; 2020 - EdgeLedger</p>
+    </footer>
+
+       <!-- Custom Javascript -->
+       <script>
+        const navbar = document.getElementById('navbar');
+        let scrolled = false;
+
+        window.onscroll = function() {
+            if (window.pageYOffset > 100) {
+                navbar.classList.remove('top');
+                if (!scrolled) {
+                    navbar.style.transform = 'translateY(-70px)';
+                }
+                
+                setTimeout(function () {
+                    navbar.style.transform = 'translateY(0)';
+                    scrolled = true;
+                }, 400);
+            } else {
+                navbar.classList.add('top');
+                scrolled = false;
+            }
+        }
+    </script>
+
+</body>
+</html>
